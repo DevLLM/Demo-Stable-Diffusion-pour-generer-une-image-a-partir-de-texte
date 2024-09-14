@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text 2 Image</title>
+  </head>
+
+  <body>
+    <style>
+      button {
+        border: none;
+        background-color: orange;
+        color: white;
+        padding: 10px 22px;
+        text-align: center;
+        display: inline-block;
+        font-size: 18px;
+        margin: 4px 2px;
+      }
+
+      body {
+        font-family: Arial;
+        text-align: center;
+        color: white;
+        background-color: black;
+      }
+    </style>
+
+    <h1>Text-2-Image Demo</h1>
+    <br />
+
+    <form action="/" method="post">
+      <div class="myDiv">
+        <p>Entrez le texte ici pour générer l'image:</p>
+        <textarea
+          name="prompt"
+          rows="3"
+          cols="50"
+          style="font-size: 16pt"
+        ></textarea>
+      </div>
+      <br />
+
+      <div class="myDiv">
+        <button>Générer</button>
+      </div>
+      {% if image_url is defined %}
+      <div>
+        <img src="{{ image_url }}" />
+      </div>
+      {% endif%}
+    </form>
+    <br />
+  </body>
+</html>
